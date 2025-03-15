@@ -42,7 +42,7 @@ jobs:
 
       - name: Clear Cache
         run: rm -rf ~/.npm ~/.cache
-        
+
       # Step 7: Clean and build React Native Android app
       - name: Build React Native APK
         run: |
@@ -50,11 +50,11 @@ jobs:
           ./gradlew assembleRelease
 
       # Step 8: Upload the APK as an artifact
-      - name: Upload APK
-        uses: actions/upload-artifact@v3
-        with:
-          name: app-release.apk
-          path: android/app/build/outputs/apk/release/app-release.apk
+    #   - name: Upload APK
+    #     uses: actions/upload-artifact@v3
+    #     with:
+    #       name: app-release.apk
+    #       path: android/app/build/outputs/apk/release/app-release.apk
 
           
           
