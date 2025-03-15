@@ -63,13 +63,9 @@ function App(): JSX.Element {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-     <View>
-      <Text> This is CI/CD</Text>
+    <SafeAreaView style={{flex:1}} >
+     <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
+      <Text style={{fontSize:20,color:'#000000'}}> This is CI/CD </Text>
      </View>
     </SafeAreaView>
   );
