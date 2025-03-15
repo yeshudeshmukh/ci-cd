@@ -40,6 +40,9 @@ jobs:
       - name: Grant execute permission to Gradle
         run: chmod +x ./android/gradlew
 
+      - name: Clear Cache
+        run: rm -rf ~/.npm ~/.cache
+        
       # Step 7: Clean and build React Native Android app
       - name: Build React Native APK
         run: |
@@ -52,5 +55,8 @@ jobs:
         with:
           name: app-release.apk
           path: android/app/build/outputs/apk/release/app-release.apk
+
+          
+          
 
           
