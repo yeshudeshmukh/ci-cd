@@ -37,10 +37,10 @@ function App(): JSX.Element {
   };
 
   return (
-    <SafeAreaView style={{flex:1}} >
+    <SafeAreaView style={{backgroundColor:'green',flex:1}} >
      <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
-      <Text style={{fontSize:20,color:'#000000'}}> Welcome to CI/CD test </Text>
-      <Text style={{fontSize:20,color:'#000000'}}> Welcome to CI/CD sene apk to whatsapp </Text>
+      <Text style={{fontSize:30,color:'#ffffff'}}> Welcome to CI/CD test </Text>
+      <Text style={{fontSize:25,color:'#ffffff'}}> APK send on whatsapp </Text>
      </View>
     </SafeAreaView>
   );
