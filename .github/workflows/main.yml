@@ -58,12 +58,12 @@ jobs:
       
       # Step 9 : Send APK to WhatsApp
       - name: Send APK to WhatsApp
-      run: |
-        curl -X POST https://api.twilio.com/2010-04-01/Accounts/${{ secrets.TWILIO_ACCOUNT_SID }}/Messages.json \
-        --data-urlencode "To=whatsapp:+919309793969" \
-        --data-urlencode "From=whatsapp:+14155238886" \
-        --data-urlencode "Body=Download the latest APK: https://github.com/yeshudeshmukh/ci-cd/actions/runs/13876470097/artifacts/2758397926" \
-        -u ${{ secrets.TWILIO_ACCOUNT_SID }}:${{ secrets.TWILIO_AUTH_TOKEN }}
+        run: |
+          curl -X POST https://api.twilio.com/2010-04-01/Accounts/${{ secrets.TWILIO_ACCOUNT_SID }}/Messages.json \
+          --data-urlencode "To=whatsapp:+919309793969" \
+          --data-urlencode "From=whatsapp:+14155238886" \
+          --data-urlencode "Body=Download the latest APK: https://github.com/yeshudeshmukh/ci-cd/actions/runs/13876470097/artifacts/2758397926" \
+          -u ${{ secrets.TWILIO_ACCOUNT_SID }}:${{ secrets.TWILIO_AUTH_TOKEN }}
             
 
           
