@@ -24,8 +24,9 @@ client.on('ready', async () => {
   console.log('✅ WhatsApp Web is ready!');
 
   const number = '919309793969@c.us'; // Target WhatsApp number
-  const apkPath = path.resolve(__dirname, '../android/app/build/outputs/apk/release/app-release.apk');
+  const apkPath = path.resolve(__dirname, '../android/app/build/outputs/apk/debug/app-debug.apk');
   const media = MessageMedia.fromFilePath(apkPath);
+
 
   try {
     await client.sendMessage(number, media);
