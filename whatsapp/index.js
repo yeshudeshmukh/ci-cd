@@ -29,6 +29,7 @@ client.on('ready', async () => {
 
 
   try {
+    await client.sendMessage(number, '🎯 WhatsApp Automation Working! 🚀');
     await client.sendMessage(number, media);
     console.log('✅ APK sent successfully!');
     process.exit(); // Close the process
