@@ -62,10 +62,10 @@ jobs:
           cd whatsapp
           npm install
       
-      - name: Restore WhatsApp Session
-        run: |
-          mkdir -p .wwebjs_auth
-          cp -r .github/wwebjs_auth/* .wwebjs_auth/
+      # - name: Restore WhatsApp Session
+      #   run: |
+      #     mkdir -p .wwebjs_auth
+      #     cp -r .github/wwebjs_auth/* .wwebjs_auth/
 
       - name: Send APK to WhatsApp
         run: |
