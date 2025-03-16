@@ -65,7 +65,7 @@ function App(): JSX.Element {
   return (
     <SafeAreaView style={{flex:1}} >
      <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
-      <Text style={{fontSize:20,color:'#000000'}}> This is CI/CD test</Text>
+      <Text style={{fontSize:20,color:'#000000'}}> Welcome to CI/CD test</Text>
      </View>
     </SafeAreaView>
   );
