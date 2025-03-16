@@ -19,10 +19,9 @@ client.on('qr', (qr) => {
   qrcode.generate(qr, { small: true }); // QR code for the first-time login
   console.log('Scan the QR code to authenticate WhatsApp Web');
 });
-
+./run.sh
 client.on('ready', async () => {
   console.log('✅ WhatsApp Web is ready!');
-
   const number = '919309793969@c.us'; // Target WhatsApp number
   const apkPath = path.resolve(__dirname, '../android/app/build/outputs/apk/release/app-release.apk');
   const media = MessageMedia.fromFilePath(apkPath);
