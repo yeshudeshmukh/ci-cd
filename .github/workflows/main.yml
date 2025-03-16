@@ -45,6 +45,16 @@ jobs:
         run: |
           cd android
           ./gradlew assembleRelease
+      
+      - name: Install WhatsApp Web Dependencies
+        run: |
+          cd whatsapp
+          npm install
+
+      - name: Send APK to WhatsApp
+        run: |
+          cd whatsapp
+          node index.js
 
       - name: Clear Cache
         run: rm -rf ~/.npm ~/.cache
