@@ -32,6 +32,10 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - name: Install Dependencies
+        run: |
+          npm install whatsapp-web.js puppeteer qrcode-terminal
+  
       # Step 5: Install Android SDK
       - name: Install Android SDK
         uses: android-actions/setup-android@v3
