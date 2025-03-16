@@ -32,10 +32,6 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Install Dependencies
-        run: |
-          npm install whatsapp-web.js puppeteer qrcode-terminal
-  
       # Step 5: Install Android SDK
       - name: Install Android SDK
         uses: android-actions/setup-android@v3
@@ -64,20 +60,20 @@ jobs:
         run: rm -rf ~/.npm ~/.cache
 
       # Step 8: Upload the APK as an artifact
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: app-release.apk
-          path: android/app/build/outputs/apk/release/app-release.apk
+      # - name: Upload APK
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: app-release.apk
+      #     path: android/app/build/outputs/apk/release/app-release.apk
       
       # Step 9 : Send APK to WhatsApp
-      - name: Send APK to WhatsApp
-        run: |
-          curl -X POST https://api.twilio.com/2010-04-01/Accounts/${{ secrets.TWILIO_ACCOUNT_SID }}/Messages.json \
-          --data-urlencode "To=whatsapp:+919309793969" \
-          --data-urlencode "From=whatsapp:+14155238886" \
-          --data-urlencode "Body=Download the latest APK: https://github.com/yeshudeshmukh/ci-cd/actions/runs/13876470097/artifacts/2758397926" \
-          -u ${{ secrets.TWILIO_ACCOUNT_SID }}:${{ secrets.TWILIO_AUTH_TOKEN }}
+      # - name: Send APK to WhatsApp
+      #   run: |
+      #     curl -X POST https://api.twilio.com/2010-04-01/Accounts/${{ secrets.TWILIO_ACCOUNT_SID }}/Messages.json \
+      #     --data-urlencode "To=whatsapp:+919309793969" \
+      #     --data-urlencode "From=whatsapp:+14155238886" \
+      #     --data-urlencode "Body=Download the latest APK: https://github.com/yeshudeshmukh/ci-cd/actions/runs/13876470097/artifacts/2758397926" \
+      #     -u ${{ secrets.TWILIO_ACCOUNT_SID }}:${{ secrets.TWILIO_AUTH_TOKEN }}
             
 
           
